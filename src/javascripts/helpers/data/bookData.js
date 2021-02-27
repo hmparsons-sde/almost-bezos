@@ -13,7 +13,27 @@ const getBooks = () => new Promise((resolve, reject) => {
 
 // DELETE BOOK
 // CREATE BOOK
+const createBook = (bookObject) => new Promise((resolve, reject) => {
+  axios.post(`${dbUrl}/books.json`, bookObject)
+    .then((response) => {
+      const body = { firebaseKey: response.data.name };
+      axios.patch(`${dbUrl}/books/${response.data.name}.json`, body)
+        .then(() => {
+          getBooks().then((booksArray) => resolve(booksArray));
+        });
+    }).catch((error) => reject(error));
+});
+
+// GET BOOKS ON SALE
+const getSaleBooks = () => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/books.json?orderBy="sale"&equalTo=true`)
+    .then((response) => {
+      const saleBooksArray = Object.values(response.data);
+      resolve(saleBooksArray);
+    }).catch((error) => reject(error));
+});
+
 // UPDATE BOOK
 // SEARCH BOOKS
 
-export default getBooks;
+export { getBooks, createBook, getSaleBooks };
