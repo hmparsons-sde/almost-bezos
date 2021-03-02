@@ -34,7 +34,7 @@ const domEvents = (uid) => {
         price: document.querySelector('#price').value,
         sale: document.querySelector('#sale').checked,
         author_id: document.querySelector('#author').value,
-        uid
+        uid: firebase.auth().currentUser.uid
       };
 
       createBook(bookObject, uid).then((booksArray) => showBooks(booksArray));
@@ -71,6 +71,7 @@ const domEvents = (uid) => {
       const authorObject = {
         first_name: document.querySelector('#first_name').value,
         last_name: document.querySelector('#last_name').value,
+        email: document.querySelector('#email').value,
         uid: firebase.auth().currentUser.uid
       };
       createAuthors(authorObject, uid).then((authorArray) => showAuthors(authorArray));
