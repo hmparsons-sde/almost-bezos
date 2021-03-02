@@ -1,18 +1,18 @@
 const showAuthors = (array) => {
-  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-author-btn">Add an Author</button>';
   document.querySelector('#store').innerHTML = '';
+  document.querySelector('#add-button').innerHTML = '<button class="btn btn-success btn-lg mb-4" id="add-author-btn">Add An Author</button>';
+
   document.querySelector('#form-container').innerHTML = '';
 
   array.forEach((item) => {
-    document.querySelector('#store').innerHTML += `<div class="card">
-        <div class="card-body" style="height: 180px;">
-        <h5 class="card-title">${item.firstName} ${item.lastName}</h5>
-        <p class="card-text bold" id="email"></p>
-        <hr>
-        <button class="btn btn-info" data-toggle="modal" data-target="#formModal" id="edit-author-btn--${item.firebaseKey}">Edit Author</button>
-        <button class="btn btn-danger" id="delete-author-btn--${item.firebaseKey}">Delete Author</button>
-        </div>
-      </div>`;
+    // FIXME: STUDENTS create cards for your authors
+    document.querySelector('#store').innerHTML += `
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">${item.first_name} ${item.last_name}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">${item.email}</h6>
+      </div>
+    </div>`;
   });
 };
 
