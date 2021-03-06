@@ -7,8 +7,24 @@
     "sale": false,
     "author_id": "-MTpcli73mfiIqW0lpPe"
   },
+  "-MTpclfzY9GLtKDsDYTs-ss": {
+    "firebaseKey": "-MTpclfzY9GLtKDsDYTs-ss",
+    "price": 25.99,
+    "title": "Fifty Shades of Chicken",
+    "image": "https://firebasestorage.googleapis.com/v0/b/almost-1564e.appspot.com/o/books%2Fchicken.jpg?alt=media&token=77e7cf36-4f72-4ee0-a487-dd1d366ced63",
+    "sale": false,
+    "author_id": "-MTpcli73mfiIqW0lpPe"
+  },
   "-MTpclg-BDWqEqyNcYzx": {
     "firebaseKey": "-MTpclg-BDWqEqyNcYzx",
+    "price": 15.45,
+    "title": "Fifty Shades of Bacon",
+    "image": "https://firebasestorage.googleapis.com/v0/b/almost-1564e.appspot.com/o/books%2Fbacon.jpg?alt=media&token=4641983b-59a5-4d1f-8e8e-7f2114f02455",
+    "sale": true,
+    "author_id": "-MTpcli9kmjpvbdr-ckb"
+  },
+  "-MTpclg-BDWqEqyNcYzx-xx": {
+    "firebaseKey": "-MTpclg-BDWqEqyNcYzx-xx",
     "price": 15.45,
     "title": "Fifty Shades of Bacon",
     "image": "https://firebasestorage.googleapis.com/v0/b/almost-1564e.appspot.com/o/books%2Fbacon.jpg?alt=media&token=4641983b-59a5-4d1f-8e8e-7f2114f02455",
